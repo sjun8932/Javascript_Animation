@@ -1,0 +1,456 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  -webkit-box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #d74b4b;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card,
+.wrap {
+  position: relative;
+  width: 300px;
+  height: 150px;
+  border-radius: 12px;
+  -webkit-perspective: 350px;
+          perspective: 350px;
+}
+
+.wrap {
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.card:hover .wrap {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.back,
+.front {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  background: #fff;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 1;
+}
+
+.back {
+  -webkit-transform: rotateX(180deg) translate(-50%, -50%);
+          transform: rotateX(180deg) translate(-50%, -50%);
+}
+
+@-webkit-keyframes driving {
+  0% {
+    margin-top: 5px;
+    -webkit-transform: scaleY(0.95) skew(1deg);
+            transform: scaleY(0.95) skew(1deg);
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes driving {
+  0% {
+    margin-top: 5px;
+    -webkit-transform: scaleY(0.95) skew(1deg);
+            transform: scaleY(0.95) skew(1deg);
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+.bycicle,
+.car {
+  position: relative;
+  padding-top: 35px;
+  -webkit-animation: driving 0.7s infinite linear alternate;
+          animation: driving 0.7s infinite linear alternate;
+}
+
+.street,
+.sky {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.street {
+  height: 42px;
+  background: #3b3b3b;
+  border-radius: 0 0 12px 12px;
+}
+
+.sky {
+  height: 150px;
+  background: #ededed;
+  border-radius: 12px;
+}
+
+.road,
+.cloud {
+  position: absolute;
+  height: 1px;
+  border-radius: 1px;
+}
+
+.road_1 {
+  top: 4px;
+  right: 0;
+  width: 27px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.4s linear infinite;
+          animation: bottom 2.4s linear infinite;
+}
+
+.cloud_1 {
+  top: 88px;
+  right: 0;
+  width: 1px;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 1.1s linear infinite;
+          animation: bottom 1.1s linear infinite;
+}
+
+.road_2 {
+  top: 27px;
+  right: 0;
+  width: 30px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.9s linear infinite;
+          animation: bottom 3.9s linear infinite;
+}
+
+.cloud_2 {
+  top: 9px;
+  right: 0;
+  width: 41px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 0.8s linear infinite;
+          animation: bottom 0.8s linear infinite;
+}
+
+.road_3 {
+  top: 13px;
+  right: 0;
+  width: 1px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 0.5s linear infinite;
+          animation: bottom 0.5s linear infinite;
+}
+
+.cloud_3 {
+  top: 8px;
+  right: 0;
+  width: 35px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 4s linear infinite;
+          animation: bottom 4s linear infinite;
+}
+
+.road_4 {
+  top: 5px;
+  right: 0;
+  width: 21px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.6s linear infinite;
+          animation: bottom 2.6s linear infinite;
+}
+
+.cloud_4 {
+  top: 112px;
+  right: 0;
+  width: 41px;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.8s linear infinite;
+          animation: bottom 2.8s linear infinite;
+}
+
+.road_5 {
+  top: 24px;
+  right: 0;
+  width: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.5s linear infinite;
+          animation: bottom 3.5s linear infinite;
+}
+
+.cloud_5 {
+  top: 75px;
+  right: 0;
+  width: 35px;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.4s linear infinite;
+          animation: bottom 3.4s linear infinite;
+}
+
+.road_6 {
+  top: 14px;
+  right: 0;
+  width: 31px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 4s linear infinite;
+          animation: bottom 4s linear infinite;
+}
+
+.cloud_6 {
+  top: 134px;
+  right: 0;
+  width: 41px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.2s linear infinite;
+          animation: bottom 3.2s linear infinite;
+}
+
+.road_7 {
+  top: 10px;
+  right: 0;
+  width: 14px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.7s linear infinite;
+          animation: bottom 2.7s linear infinite;
+}
+
+.cloud_7 {
+  top: 129px;
+  right: 0;
+  width: 28px;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 1.2s linear infinite;
+          animation: bottom 1.2s linear infinite;
+}
+
+.road_8 {
+  top: 11px;
+  right: 0;
+  width: 21px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 1.5s linear infinite;
+          animation: bottom 1.5s linear infinite;
+}
+
+.cloud_8 {
+  top: 29px;
+  right: 0;
+  width: 2px;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.2s linear infinite;
+          animation: bottom 3.2s linear infinite;
+}
+
+.road_9 {
+  top: 18px;
+  right: 0;
+  width: 28px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 1.1s linear infinite;
+          animation: bottom 1.1s linear infinite;
+}
+
+.cloud_9 {
+  top: 36px;
+  right: 0;
+  width: 16px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.8s linear infinite;
+          animation: bottom 2.8s linear infinite;
+}
+
+.road_10 {
+  top: 35px;
+  right: 0;
+  width: 26px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.7s linear infinite;
+          animation: bottom 3.7s linear infinite;
+}
+
+.cloud_10 {
+  top: 145px;
+  right: 0;
+  width: 1px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.2s linear infinite;
+          animation: bottom 3.2s linear infinite;
+}
+
+.road_11 {
+  top: 1px;
+  right: 0;
+  width: 3px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 1.1s linear infinite;
+          animation: bottom 1.1s linear infinite;
+}
+
+.cloud_11 {
+  top: 14px;
+  right: 0;
+  width: 15px;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 4.2s linear infinite;
+          animation: bottom 4.2s linear infinite;
+}
+
+.road_12 {
+  top: 28px;
+  right: 0;
+  width: 28px;
+  border-bottom: 2px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 1.2s linear infinite;
+          animation: bottom 1.2s linear infinite;
+}
+
+.cloud_12 {
+  top: 125px;
+  right: 0;
+  width: 28px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.1s linear infinite;
+          animation: bottom 2.1s linear infinite;
+}
+
+.road_13 {
+  top: 15px;
+  right: 0;
+  width: 37px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 3.6s linear infinite;
+          animation: bottom 3.6s linear infinite;
+}
+
+.cloud_13 {
+  top: 15px;
+  right: 0;
+  width: 42px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.5s linear infinite;
+          animation: bottom 2.5s linear infinite;
+}
+
+.road_14 {
+  top: 26px;
+  right: 0;
+  width: 26px;
+  border-bottom: 1px solid #dbdbdb;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 2.9s linear infinite;
+          animation: bottom 2.9s linear infinite;
+}
+
+.cloud_14 {
+  top: 44px;
+  right: 0;
+  width: 3px;
+  border-bottom: 2px solid #cfcfcf;
+  -webkit-transition: 3s;
+  transition: 3s;
+  -webkit-animation: bottom 0.6s linear infinite;
+          animation: bottom 0.6s linear infinite;
+}
+
+@-webkit-keyframes bottom {
+  100% {
+    right: 300px;
+  }
+}
+
+@keyframes bottom {
+  100% {
+    right: 300px;
+  }
+}
+/*# sourceMappingURL=TurnCard.css.map */
