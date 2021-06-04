@@ -48,7 +48,7 @@ body
     background: #2196f3;
     transition: width 0.5s, height 0.5s;
 }
-
+g
 .btn:hover::before
 {
     width: 300px;
